@@ -39,3 +39,79 @@ transform: translateY(0); /* Normal position */
 transform: translateY(-10px); /* Move up slightly */
 }
 }
+
+/* Hover Effect */
+.logo:hover {
+color: #b6b5b5; /* Change color on hover */
+text-shadow: 0 0 15px rgba(149, 146, 140, 0.8); /* Glowing effect */
+transform: scale(1.1); /* Slightly scale up */
+transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+nav {
+background-color: #222121;
+color: white;
+padding: 1rem;
+display: grid;
+justify-content: space-between;
+align-items: center;
+position: relative;
+overflow: hidden;
+}
+
+/* Hover Effect on Links */
+nav a {
+color: rgb(196, 193, 193);
+margin: 0 1rem;
+
+text-decoration: wavy;
+transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Link Hover Animation */
+nav a:hover {
+color: #858585; /* Change color to gold when hovered */
+text-decoration:none;
+transform: scale(1.1); /* Slightly grow the text */
+}
+
+/* Animation for Nav Items */
+nav a {
+position: relative;
+}
+
+nav a:before {
+content: '';
+position: absolute;
+height: 2px;
+width: 0;
+background-color: #8f8d8a; /* Gold underline effect */
+bottom: 0;
+left: 50%;
+transition: all 0.3s ease;
+}
+
+nav a:hover:before {
+width: 100%;
+left: 0;
+}
+
+/* Animation for the Nav Bar Background */
+nav {
+animation: slideIn 0.5s ease-out;
+}
+
+/* Keyframe Animation for Navbar Background */
+@keyframes slideIn {
+0% {
+background-color: transparent;
+}
+100% {
+background-color: #222121;
+}
+}
+
+/* Adding a subtle glow effect when hovered */
+nav a:hover {
+box-shadow: 0 0 8px rgba(243, 156, 18, 0.8); /* Glow effect on hover */
+}
+
