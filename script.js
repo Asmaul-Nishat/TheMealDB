@@ -32,7 +32,6 @@ async function fetchMeals(query) {
     displayedMeals = allMeals.slice(0, 5);
     renderMeals();
 }
-/ Render meals to the results div
 function renderMeals() {
     mealResults.innerHTML = '';
     if (displayedMeals.length === 0) {
@@ -61,5 +60,31 @@ function renderMeals() {
         mealResults.appendChild(showAllButton);
     }
 }
+
+// Show all meals
+function showAllMeals() {
+    displayedMeals = allMeals;
+    renderMeals();
+}
+
+// Category button filter
+const categoryButtons = document.querySelectorAll('.categories button');
+categoryButtons.forEach(button => {
+    button.addEventListener('click', async function() {
+        const category = this.dataset.category;
+        await fetchMealsByCategory(category);
+    });
+});
+
+// Fetch meals by category
+async function fetchMealsByCategory(category) {
+    let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    allMeals = data.meals || [];
+    displayedMeals = allMeals.slice(0, 5);
+    renderMeals();
+}
+
 
 
