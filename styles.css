@@ -264,3 +264,263 @@ background-color: #212021;
 }
 /* Search Bar Container */
 /* Search Bar Container */
+.search-bar {
+margin: 2rem auto;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+width: 100%;
+max-width: 600px; /* Limits the width of the search bar */
+transition: transform 0.3s ease, opacity 0.3s ease;
+animation: slideIn 0.8s ease forwards;
+opacity: 0; /* Initial state for animation */
+}
+
+/* Style for Search Input */
+.search-bar input {
+width: 100%;
+padding: 0.8rem 1.5rem;
+font-size: 1rem;
+border: 2px solid #807e7e;
+border-radius: 30px;
+outline: none;
+color: #000000;
+transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Focused Input Styling */
+.search-bar input:focus {
+border-color: #636060;
+box-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
+transform: scale(1.05); /* Subtle scaling on focus */
+}
+
+/* Search Button */
+.search-bar .search-btn {
+position: absolute;
+right: 10px;
+background-color: #333;
+color: rgb(140, 140, 140);
+padding: 10px 15px;
+border-radius: 50%;
+font-size: 1.2rem;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on the search button */
+.search-bar .search-btn:hover {
+background-color: #7cb0b9;
+transform: scale(1.15) rotate(15deg); /* Adds rotation and scaling */
+}
+
+/* Input Placeholder Animation */
+.search-bar input::placeholder {
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* On focus, placeholder moves slightly up */
+.search-bar input:focus::placeholder {
+transform: translateY(-5px);
+opacity: 0.7;
+}
+
+/* Focus effect links Input and Button */
+.search-bar input:focus ~ .search-btn {
+transform: scale(1.2) rotate(-10deg); /* Links input focus with button animation */
+}
+
+/* Search Bar Slide-In Animation */
+@keyframes slideIn {
+from {
+transform: translateY(-30px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
+/* heading */
+/* Check Section Styling */
+.check {
+background-color: #af9b4c; /* Green background to represent the theme of meals */
+color: rgb(206, 202, 202); /* White text for contrast */
+padding: 3rem 2rem; /* Padding for spacing */
+text-align: center; /* Center text horizontally */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect for depth */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for the check div */
+.check:hover {
+transform: scale(1.05); /* Slight scale effect */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Heading inside the check section */
+.check h1 {
+font-size: 2.5rem; /* Larger font for emphasis */
+font-weight: bold; /* Bold text */
+letter-spacing: 1px; /* Slight letter spacing */
+text-transform: uppercase; /* Uppercase letters */
+margin: 0; /* Remove default margin */
+animation: fadeInUp 1s ease-out; /* Smooth fade-in and slide-up animation */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.blogs {
+padding: 2rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+
+/* Blog Card Styling */
+.blog-card {
+border: 1px solid #6a6969;
+border-radius: 8px;
+overflow: hidden;
+background-color: #222121;
+color: #bebcbc;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Blog Card Hover Effect */
+.blog-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog Card Image */
+.blog-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+/* Blog Card Image Hover Effect */
+.blog-card:hover img {
+transform: scale(1.05);
+}
+
+/* Blog Card Title */
+.blog-card h3 {
+margin: 1rem;
+color: #f0f0f0;
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+/* Blog Card Paragraph */
+.blog-card p {
+margin: 0 1rem 1rem;
+line-height: 1.5;
+color: #ccc;
+}
+
+/* Meal Card Styling */
+.meal-card {
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+background-color: rgb(171, 170, 170);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Meal Card Hover Effect */
+.meal-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Meal Card Image */
+.meal-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+/* Meal Card Image Hover Effect */
+.meal-card:hover img {
+transform: scale(1.05);
+}
+
+/* Meal Card Title */
+.meal-card h3 {
+margin: 1rem;
+color: #333;
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+/* Meal Card Paragraph */
+.meal-card p {
+margin: 0 1rem 1rem;
+line-height: 1.5;
+color: #555;
+}
+
+.show-all-btn {
+display: block;
+text-align: center;
+background-color: #333;
+color: rgb(172, 168, 168);
+border: none;
+padding: 0.5rem 1rem;
+cursor: pointer;
+margin: 2rem auto;
+border-radius: 5px; /* Rounded corners for a softer look */
+font-size: 1.1rem;
+transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Hover Effect */
+.show-all-btn:hover {
+background-color: #555; /* Slightly lighter background */
+color: #fff; /* White text on hover */
+transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active Effect (when button is clicked) */
+.show-all-btn:active {
+transform: scale(0.95); /* Slightly shrink the button to give a pressed effect */
+background-color: #444; /* Darken the background on click */
+}
+
+/* Pulse Animation (Subtle effect on hover) */
+.show-all-btn:hover {
+animation: pulse 1.5s infinite; /* Apply pulse animation on hover */
+}
+
+/* Pulse Keyframe Animation */
+@keyframes pulse {
+0% {
+transform: scale(1.05);
+}
+50% {
+transform: scale(1.1); /* Slightly increase the size during the animation */
+}
+100% {
+transform: scale(1.05);
+}
+}
