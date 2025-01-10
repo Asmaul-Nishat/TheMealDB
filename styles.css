@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222121;
+}
+/* Navigation Bar Styles */
+.logo {
+font-size: 2.5rem; /* Larger size for emphasis */
+color: #b79541f7; /* Gold color */
+font-weight: bold;
+text-transform:capitalize;
+display:flex;
+font-family: Ar;
+opacity: 0; /* Initially hidden */
+animation: fadeInUp 2s ease-out forwards, bounce 1s ease-in-out; /* Apply fadeInUp and bounce animation */
+text-align: center;
+letter-spacing: 2px; /* Adds spacing between letters */
+}
+
+/* Keyframe for Fade-in Animation */
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(20px); /* Start slightly below */
+}
+100% {
+opacity: 1;
+transform: translateY(0); /* End at the normal position */
+}
+}
+
+/* Keyframe for Bouncing Animation (Only runs once) */
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0); /* Normal position */
+}
+50% {
+transform: translateY(-10px); /* Move up slightly */
+}
+}
