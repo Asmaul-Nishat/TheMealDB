@@ -524,3 +524,69 @@ transform: scale(1.1); /* Slightly increase the size during the animation */
 transform: scale(1.05);
 }
 }
+
+.footer {
+background-color: #6b6969;
+color: rgb(215, 215, 215);
+padding: 2rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Footer Hover Effect */
+.footer:hover {
+background-color: #575757; /* Slightly darker background when hovered */
+transform: translateY(-5px); /* Subtle upward movement */
+}
+
+/* Social Links Container */
+.footer .social-links {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+position: relative;
+}
+
+/* Social Links Styling */
+.footer .social-links a {
+color: rgb(205, 205, 205);
+font-size: 1.5rem;
+margin: 0 1rem;
+text-decoration: none;
+position: relative;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Social Links Hover Effect */
+.footer .social-links a::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #fff; /* White underline on hover */
+transition: width 0.3s ease;
+}
+
+/* Expand underline effect on hover */
+.footer .social-links a:hover::before {
+width: 100%;
+}
+
+/* Social Links Hover Color Change */
+.footer .social-links a:hover {
+color: #fff; /* Change color to white on hover */
+transform: translateY(-5px); /* Subtle upward movement */
+}
+
+/* Footer Text - No Vanishing Effect */
+.footer p {
+opacity: 1; /* Keep paragraph visible */
+transition: opacity 0.3s ease;
+}
+
+
