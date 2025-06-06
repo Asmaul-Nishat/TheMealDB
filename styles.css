@@ -120,7 +120,7 @@ box-shadow: 0 0 8px rgba(243, 156, 18, 0.8); /* Glow effect on hover */
 position: relative;
 height: 500px; /* Increased height */
 width: 100%;
-background: url('mal.jpg') no-repeat center center/cover; /* Background Image */
+background: url('picture/font-picture.jpg') no-repeat center center/cover; /* Background Image */
 display: flex;
 justify-content: center;
 align-items: center;
